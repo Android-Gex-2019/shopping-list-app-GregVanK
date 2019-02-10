@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Shopping List</string>
+    <string name="main_button_text">Add to List</string>
+    <string name="eggs_button_text">Eggs</string>
+    <string name="carrots_button_text">Carrots</string>
+    <string name="milk_button_text">Milk</string>
+    <string name="cheese_button_text">Cheese</string>
+    <string name="juice_button_text">Juice</string>
+    <string name="meat_button_text">Meat</string>
+    <string name="bread_button_text">Bread</string>
+    <string name="apples_button_text">Apples</string>
+    <string name="cakes_button_text">Cakes</string>
+    <string name="rats_button_text">Rats</string>
 </resources>

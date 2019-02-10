@@ -10,15 +10,14 @@
         android:id="@+id/button_egg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="itemSelection"
         android:text="@string/eggs_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_milk"
-        app:layout_constraintEnd_toStartOf="@+id/button_carrots"
+        app:layout_constraintEnd_toStartOf="@+id/button_bread"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,11 +30,10 @@
         android:text="@string/carrots_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_cheese"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_milk"
+        app:layout_constraintEnd_toStartOf="@+id/button_cheese"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_egg"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/button_milk" />
 
     <Button
         android:id="@+id/button_milk"
@@ -46,12 +44,10 @@
         android:text="@string/milk_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_bread"
-        app:layout_constraintEnd_toStartOf="@+id/button_cheese"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_bread"
+        app:layout_constraintEnd_toStartOf="@+id/button_carrots"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_egg" />
+        app:layout_constraintStart_toEndOf="@+id/button_bread" />
 
     <Button
         android:id="@+id/button_cheese"
@@ -62,11 +58,10 @@
         android:text="@string/cheese_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_apples"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_carrots"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_milk"
-        app:layout_constraintTop_toBottomOf="@+id/button_carrots" />
+        app:layout_constraintStart_toEndOf="@+id/button_carrots" />
 
     <Button
         android:id="@+id/button_juice"
@@ -77,26 +72,27 @@
         android:text="@string/juice_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_rats"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_meat"
+        app:layout_constraintEnd_toStartOf="@+id/button_apples"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_meat" />
+        app:layout_constraintStart_toEndOf="@+id/button_meat" />
 
     <Button
         android:id="@+id/button_meat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="itemSelection"
         android:text="@string/meat_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_juice"
-        app:layout_constraintEnd_toStartOf="@+id/button_cake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_juice"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_bread" />
+        app:layout_constraintTop_toBottomOf="@+id/button_egg" />
 
     <Button
         android:id="@+id/button_bread"
@@ -107,11 +103,10 @@
         android:text="@string/bread_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_meat"
-        app:layout_constraintEnd_toStartOf="@+id/button_apples"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_egg"
+        app:layout_constraintEnd_toStartOf="@+id/button_milk"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_milk" />
+        app:layout_constraintStart_toEndOf="@+id/button_egg" />
 
     <Button
         android:id="@+id/button_apples"
@@ -122,11 +117,10 @@
         android:text="@string/apples_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_cake"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_juice"
+        app:layout_constraintEnd_toStartOf="@+id/button_cake"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_bread"
-        app:layout_constraintTop_toBottomOf="@+id/button_cheese" />
+        app:layout_constraintStart_toEndOf="@+id/button_juice" />
 
     <Button
         android:id="@+id/button_cake"
@@ -137,11 +131,10 @@
         android:text="@string/cakes_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_rats"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_apples"
+        app:layout_constraintEnd_toStartOf="@+id/button_rats"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_meat"
-        app:layout_constraintTop_toBottomOf="@+id/button_apples" />
+        app:layout_constraintStart_toEndOf="@+id/button_apples" />
 
     <Button
         android:id="@+id/button_rats"
@@ -152,9 +145,8 @@
         android:text="@string/rats_button_text"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_cake"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_juice"
-        app:layout_constraintTop_toBottomOf="@+id/button_cake" />
+        app:layout_constraintStart_toEndOf="@+id/button_cake" />
 </android.support.constraint.ConstraintLayout>

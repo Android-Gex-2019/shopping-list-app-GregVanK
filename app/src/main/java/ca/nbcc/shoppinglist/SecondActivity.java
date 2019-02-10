@@ -14,6 +14,10 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         cart = (ShoppingCart)getIntent().getSerializableExtra("cart");
+        if(savedInstanceState != null){
+            if(cart == null)
+                savedInstanceState.getSerializable("cart");
+        }
 
 
     }
@@ -24,5 +28,14 @@ public class SecondActivity extends AppCompatActivity {
         Intent returnIntent = new Intent(this, MainActivity.class);
         returnIntent.putExtra("cart",cart);
         startActivity(returnIntent);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(cart != null){
+            outState.putSerializable("cart",cart);
+        }
+
     }
 }

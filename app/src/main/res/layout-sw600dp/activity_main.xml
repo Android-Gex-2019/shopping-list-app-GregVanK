@@ -32,5 +32,6 @@
         android:background="@android:color/holo_blue_light"
         android:onClick="moveToItemSelect"
         android:text="@string/main_button_text"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
 </LinearLayout>

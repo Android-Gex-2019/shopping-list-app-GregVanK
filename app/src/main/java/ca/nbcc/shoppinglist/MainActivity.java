@@ -17,11 +17,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cart = (ShoppingCart)getIntent().getSerializableExtra("cart");
+        if(savedInstanceState != null){
+            if(cart == null)
+            savedInstanceState.getSerializable("cart");
+        }
+
         //update list
         if(cart !=null){
             TextView list = findViewById(R.id.text_shoppinglist);
             list.setText(cart.toString());
         }
+
 
     }
     public void moveToItemSelect(View v){
@@ -31,5 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
         moveIntent.putExtra("cart",cart);
         startActivity(moveIntent);
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(cart != null){
+            outState.putSerializable("cart",cart);
+        }
+
     }
 }
