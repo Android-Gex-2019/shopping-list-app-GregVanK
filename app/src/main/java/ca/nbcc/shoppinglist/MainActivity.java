@@ -8,16 +8,25 @@ import android.widget.TextView;
 
 import java.io.Serializable;
 
+/**
+ * File: MainActivity
+ * Author: Greg VanKampen
+ * Date: 2/9/2019
+ */
 public class MainActivity extends AppCompatActivity {
 
-
     ShoppingCart cart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //grab any existing cart sent by an intent
         cart = (ShoppingCart)getIntent().getSerializableExtra("cart");
+
         if(savedInstanceState != null){
+            //if a cart wasn't grabbed, but one exists in a save instance
             if(cart == null)
             savedInstanceState.getSerializable("cart");
         }
@@ -30,14 +39,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     public void moveToItemSelect(View v){
         Intent moveIntent = new Intent(this, SecondActivity.class);
+
+        //create a new cart if no existing cart
         if(cart == null)
             cart = new ShoppingCart();
-
         moveIntent.putExtra("cart",cart);
         startActivity(moveIntent);
     }
+
+    //save cart
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);

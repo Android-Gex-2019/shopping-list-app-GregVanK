@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * File: SecondActivity
+ * Author: Greg VanKampen
+ * Date: 2/9/2019
+ */
 public class SecondActivity extends AppCompatActivity {
 
     ShoppingCart cart;
